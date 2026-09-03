@@ -52,7 +52,14 @@ body, .contact-input, .contact-textarea  {
     border: 2px solid #333333;
     border-radius: 20px;
 }
-.contact-input::-webkit:-webkit-input-placeholder-input-placeholder, .contact-textarea: {
+.contact-input::-webkit-input-placeholder,
+.contact-textarea::-webkit-input-placeholder,
+.contact-input::-moz-placeholder,
+.contact-textarea::-moz-placeholder,
+.contact-input:-ms-input-placeholder,
+.contact-textarea:-ms-input-placeholder,
+.contact-input::placeholder,
+.contact-textarea::placeholder {
     color: #555555;
 }
 .contact-submit-button {
