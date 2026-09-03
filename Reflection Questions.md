@@ -2,7 +2,7 @@ Accessibility Lab Reflection and Corrections
 
 1. What accessibility enhancements were the most challenging to implement, and why?
 
-The most challenging accessibility enhancements were creating accessible form fields and properly structuring the HTML. I connected each <label> to its input using for and id, and used <fieldset> and <legend> to group radio buttons. I also used semantic elements such as <header>, <main>, <section>, <nav>, and <footer> instead of relying on <div> tags. During the lab, I added a skip navigation link for keyboard and screen-reader users and used rem units so font sizes can adjust more easily to browser settings.
+The most challenging accessibility enhancements were creating accessible form fields and properly structuring the HTML. I connected each `<label>` to its input using `for` and `id`, and used `<fieldset>` and `<legend>` to group radio buttons. I also used semantic elements such as `<header>`, `<main>`, `<section>`, `<nav>`, and `<footer>` instead of relying on `<div>` tags. During the lab, I added a skip navigation link for keyboard and screen-reader users and used rem units so font sizes can adjust more easily to browser settings.
 
 2. How do ARIA attributes improve the experience for users relying on assistive technologies?
 
@@ -34,12 +34,12 @@ The following current issues have been fixed and resolved:
   A screen-reader user might not understand what action the button would perform. I changed the button 
   text to “Send message 🎉” so the purpose of the button is clear.✔️
 
-- Semantic HTML is lacking. The original code used <div id="main"> for the main content area. I replaced 
-  it with the semantic <main> element. I also changed the main heading from <h2> to <h1>. These changes 
+- Semantic HTML is lacking. The original code used `<div id="main">` for the main content area. I replaced 
+  it with the semantic `<main>` element. I also changed the main heading from `<h2>` to `<h1>`. These changes 
   help screen readers understand the structure and importance of the content on the page.✔️
   
 - Font-sizes were defined in px instead of rems. Corrected where applies. If a user increases their 
   browser’s default text size for readability, the page text can grow with it more reliably. Px's are 
   fixed and less flexible✔️
 
-Contact page is now accessible!🦸
+Contact page is now accessible!🦸 In fact, Lighthouse gives this webpage a 100% for Performance, 84% for Accessibility, 96% for Best Practice, and 82% SEO. Just two warnings needed to be fix: 1. A form field has an id or name attribute that the browser's autofill recognizes. However, it doesn't have an autocomplete attribute assigned. This might prevent the browser from correctly autofilling the form. To fix this issue, provide an autocomplete attribute. 2. One or more documents in this page is in Quirks Mode. You can add or modify the DOCTYPE to be `<!DOCTYPE html>` to render the page in No Quirks Mode.
